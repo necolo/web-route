@@ -63,9 +63,9 @@ Using `paths` to generate the pathname is more convenient than hardcoding it.
 If you are using TypeScript, you'll also get types hint.
 
 ```typescript
-asset(String(paths.user), '/user');
-asset(String(paths.user.newUser), '/user/new');
-asset(String(paths.user.name('jony')), '/user/jony');
+assert(String(paths.user), '/user');
+assert(String(paths.user.newUser), '/user/new');
+assert(String(paths.user.name('jony')), '/user/jony');
 ```
 
 We also provide `useNav` hook to handle `paths` so you don't need to always wrap it with `String()`.  
