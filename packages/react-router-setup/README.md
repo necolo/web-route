@@ -17,26 +17,24 @@ import ReactDOM from 'react-dom';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const root = new RouteSchema({
-  root: {
-    path: '/',
-    element: <Menu />,
-    index: <HomePage />,
-    children: {
-      user: {
-        path: 'user',
-        index: <Users />,
-        children: {
-          newUser: {
-            path: 'new',
-            element: <NewUser />,
-          },
-          name: {
-            path: ':name',
-            getPath: (name: string) => name,
-            element: <User />,
-          },
-        }
-      },
+  path: '/',
+  element: <Menu />,
+  index: <HomePage />,
+  children: {
+    user: {
+      path: 'user',
+      index: <Users />,
+      children: {
+        newUser: {
+          path: 'new',
+          element: <NewUser />,
+        },
+        name: {
+          path: ':name',
+          getPath: (name: string) => name,
+          element: <User />,
+        },
+      }
     },
   },
 }); 

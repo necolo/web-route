@@ -44,9 +44,7 @@ export type RouteConfig = Omit<RouteObject, 'children' | 'index'> & {
 /* -------------------------------- nav types ------------------------------- */
 type PathGetter<P extends Array<unknown> = Array<unknown>> = (...params: P) => Paths;
 type NavMethod = PathGetter | Paths;
-export type Paths<T extends Record<string, NavMethod> | void = void> = T extends void
-  ? { toString(): string }
-  : T & { toString(): string };
+export type Paths<T extends Record<string, NavMethod> = {}> = T & { toString(): string };
 
 export type RouteChildrenToNav<T extends RouteChildren | undefined> =
   T extends RouteChildren
