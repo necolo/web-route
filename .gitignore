@@ -6,6 +6,7 @@ build.tar
 build
 pnpm-lock.yaml
 lib
+repomix-output.xml
 
 yarn.lock
 
