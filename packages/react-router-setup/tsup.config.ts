@@ -2,10 +2,10 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
   entry: ['src/index.ts'],
-  format: ['esm'],  // Output both ESM and CommonJS
-  dts: true,               // Generate declaration files
+  format: ['esm'],
+  dts: true,        
   sourcemap: false,
-  clean: true,             // Clean output directory before build
+  clean: true,            
   outDir: 'lib',
   external: [
     'react',
